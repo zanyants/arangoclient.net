@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Version>0.7.5</Version>
     <TargetFrameworks>netstandard2.0;netstandard1.3;net45</TargetFrameworks>
-    <Description>.NET client for ArangoDB with LINQ provider</Description>
+    <Description>.NET client for ArangoDB with LINQ provider, signed using Zany Ants third-party key.</Description>
     <NeutralLanguage>en-US</NeutralLanguage>
     <Authors>raoof hojat</Authors>
     <PackageProjectUrl>http://www.arangoclient.net</PackageProjectUrl>
