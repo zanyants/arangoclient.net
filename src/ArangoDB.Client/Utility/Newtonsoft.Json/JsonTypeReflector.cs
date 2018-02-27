@@ -511,7 +511,7 @@ namespace ArangoDB.Client.Utility.Newtonsoft.Json
         {
             get
             {
-#if !(PORTABLE40 || PORTABLE || DOTNET || NETSTANDARD2_0)
+#if !(PORTABLE40 || PORTABLE || DOTNET || NETSTANDARD2_0 || NET45)
                 if (DynamicCodeGeneration)
                 {
                     return DynamicReflectionDelegateFactory.Instance;
