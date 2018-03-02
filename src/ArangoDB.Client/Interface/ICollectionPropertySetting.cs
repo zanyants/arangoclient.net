@@ -9,8 +9,8 @@ namespace ArangoDB.Client
 {
     public interface ICollectionPropertySetting
     {
-        string CollectionName { get; set; }
+        string CollectionName { get; }
 
-        NamingConvention Naming { get; set; }
+        NamingConvention Naming { get; }
     }
 }

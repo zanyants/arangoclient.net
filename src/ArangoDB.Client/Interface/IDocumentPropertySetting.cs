@@ -8,13 +8,13 @@ namespace ArangoDB.Client
 {
     public interface IDocumentPropertySetting
     {
-        string PropertyName { get; set; }
+        string PropertyName { get; }
 
-        bool IgnoreProperty { get; set; }
+        bool IgnoreProperty { get; }
 
-        NamingConvention Naming { get; set; }
+        NamingConvention Naming { get; }
 
-        IdentifierType Identifier { get; set; }
+        IdentifierType Identifier { get; }
     }
 
     public enum IdentifierType
