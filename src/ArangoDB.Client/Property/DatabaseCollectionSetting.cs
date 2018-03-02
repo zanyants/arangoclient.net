@@ -195,7 +195,7 @@ namespace ArangoDB.Client.Property
 
             }
 
-            /*************   default identifer setting for type   **************/
+            /*************   default identifier setting for type   **************/
 
             if (FindIdentifierDefaultNameForType(type, IdentifierType.EdgeFrom, memberName))
                 return "_from";
@@ -208,7 +208,7 @@ namespace ArangoDB.Client.Property
             if (FindIdentifierDefaultNameForType(type, IdentifierType.Key, memberName))
                 return "_key";
 
-            /*************   default identifer setting   **************/
+            /*************   default identifier setting   **************/
 
             // * return defined default identifier name
             string defaultName = null;
