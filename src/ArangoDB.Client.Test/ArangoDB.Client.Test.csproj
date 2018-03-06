@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>netcoreapp2.0;net45;netcoreapp1.1</TargetFrameworks>
+    <TargetFrameworks>netcoreapp2.0</TargetFrameworks>
     <!--<IsPackable>false</IsPackable>-->
   </PropertyGroup>
   
@@ -18,6 +18,10 @@
   <ItemGroup>
     <ProjectReference Include="..\ArangoDB.Client\ArangoDB.Client.csproj" />
   </ItemGroup>
+
+  <PropertyGroup Condition="'$(TargetFramework)'=='net45'">
+    <DefineConstants>NET45</DefineConstants>
+  </PropertyGroup>
 
   <PropertyGroup>
     <NoWarn>1701;1702;1705,1591,1573,1572,1570,1711</NoWarn>
