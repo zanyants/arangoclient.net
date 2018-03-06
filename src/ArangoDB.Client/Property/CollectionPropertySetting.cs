@@ -41,16 +41,16 @@ namespace ArangoDB.Client.Property
             return FindCollectionAttributeForType(type);
         }
 
-        internal IDocumentPropertySetting FindDocumentPropertyForType(string memberName)
+        internal IDocumentPropertySetting FindDocumentPropertyForType(Type type, string memberName)
         {
-            return documentProperties.GetOrAdd(memberName, new DocumentPropertySetting());
+            return documentProperties.GetOrAdd(memberName, DocumentPropertySetting.FindDocumentAttributeForType(type, memberName) ?? new DocumentPropertySetting());
         }
 
         internal IDocumentPropertySetting FindDocumentPropertyForType<T>(Expression<Func<T, object>> attribute)
         {
             var memberInfo = Utils.GetMemberInfo<T>(attribute);
 
-            return documentProperties.GetOrAdd(memberInfo.Name, new DocumentPropertySetting());
+            return documentProperties.GetOrAdd(memberInfo.Name, DocumentPropertySetting.FindDocumentAttributeForType(attribute ) ?? new DocumentPropertySetting());
         }
     }
 }

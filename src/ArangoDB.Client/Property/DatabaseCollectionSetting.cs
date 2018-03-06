@@ -91,7 +91,7 @@ namespace ArangoDB.Client.Property
             ChangeCollectionPropertyForType(type, collection =>
             {
                 var collectionSetting = collection as CollectionPropertySetting;
-                action(collectionSetting.FindDocumentPropertyForType(memberName));
+                action(collectionSetting.FindDocumentPropertyForType(type, memberName));
             });
 
             setting.IdentifierModifier.ClearMethodCache(type);
