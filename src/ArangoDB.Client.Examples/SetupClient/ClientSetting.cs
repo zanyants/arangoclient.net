@@ -12,7 +12,7 @@ namespace ArangoDB.Client.Examples.SetupClient
         public void SettingProxy()
         {
             // all http requests goes through http://localhost:10099
-#if NET45
+#if NET45 && USEPROXY
             ArangoDatabase.ClientSetting.Proxy = new WebProxy("http://localhost:10099");
 #endif
         }
